@@ -230,7 +230,7 @@ class QueryPath {
    *   that the standard QueryPath options may be ignored for this function,
    *   since it uses a different parser.
    *
-   * @return QueryPath
+   * @return \QueryPath\DOMQuery
    */
   public static function withHTML5($source = NULL, $selector = NULL, $options = array()) {
     $qpClass = isset($options['QueryPath_class']) ? $options['QueryPath_class'] : '\QueryPath\DOMQuery';
@@ -252,7 +252,7 @@ class QueryPath {
   /**
    * Enable one or more extensions.
    *
-   * Extensions provide additional features to QueryPath. To enable and 
+   * Extensions provide additional features to QueryPath. To enable and
    * extension, you can use this method.
    *
    * In this example, we enable the QPTPL extension:
