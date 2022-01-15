@@ -237,11 +237,11 @@ class QueryPath {
 
     if(is_string($source)) {
       $html5 = new HTML5();
-      if (strpos($source, '<') !== FALSE && strpos($source, '>') !== FALSE) {
+      if (stripos($source, '<!doctype') !== FALSE) {
         $source = $html5->loadHTML($source);
       }
       else {
-        $source = $html5->load($source);
+        $source = $html5->loadHTMLFragment($source);
       }
     }
 
